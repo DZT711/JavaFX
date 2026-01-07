@@ -1,0 +1,7 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "code-runner.executorMap": {
+        // "java": "cd $workspaceRoot && mvn clean javafx:run"
+        "java": "cd $workspaceRoot && $fileNameWithoutExt = $fileName; if ($fileName -eq 'App.java') { $main = 'App' } else { $main = $fileNameWithoutExt }; mvn clean javafx:run -D mainApp=com.nguyenhuydzt711.$fileNameWithoutExt"
+    }
+}
