@@ -1,19 +1,15 @@
 package com.nguyenhuydzt711;
 
-import java.io.IOException;
+import java.util.List;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 
@@ -22,6 +18,7 @@ import javafx.util.Pair;
 public class choiceBox extends Application {
 
     private final ChoiceBox<Pair<String, String>> assetClass = new ChoiceBox<>();
+    private final static Pair<String, String> EMPTY_PAIR = new Pair<>("", "");
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -48,12 +45,24 @@ public class choiceBox extends Application {
 
 
     public void initChoice() {
-        assetClass.getItems().addAll(
-                new Pair<>("EQ", "Equity"),
-                new Pair<>("FI", "Fixed Income"),
-                new Pair<>("CO", "Commodities"),
-                new Pair<>("FX", "Forex"));
-        assetClass.setValue(assetClass.getItems().get(0));
+        List<Pair<String,String>> classes = new java.util.ArrayList<>();
+        classes.add(new Pair<>("Equiment", "20000")); 
+        classes.add(new Pair<>("Furniture", "21000")); 
+        classes.add(new Pair<>("Investment", "22000")); 
+        assetClass.setConverter(new javafx.util.StringConverter<Pair<String, String>>() {
+            @Override
+            public String toString(Pair<String, String> object) {
+                return object == null ? "" : object.getKey();
+            }
+
+            @Override
+            public Pair<String, String> fromString(String string) {
+                return null; // Not needed
+            }
+        });
+        assetClass.getItems().add(EMPTY_PAIR);
+        assetClass.getItems().addAll(classes);
+        assetClass.setValue(EMPTY_PAIR);
     }
     
     public static void main(String[] args) {
