@@ -5,6 +5,7 @@ com\nguyenhuydzt711\transformation.class
 com\nguyenhuydzt711\App.class
 com\nguyenhuydzt711\comboBox$1.class
 com\nguyenhuydzt711\StartVsShownJavaFXApp.class
+com\nguyenhuydzt711\pagination.class
 com\nguyenhuydzt711\listView.class
 com\nguyenhuydzt711\lineChart.class
 com\nguyenhuydzt711\saveButton.class
@@ -14,4 +15,5 @@ com\nguyenhuydzt711\choiceBox.class
 com\nguyenhuydzt711\tableView.class
 com\nguyenhuydzt711\HelloApp.class
 com\nguyenhuydzt711\listView$Player.class
+com\nguyenhuydzt711\test.class
 com\nguyenhuydzt711\comboBox.class
