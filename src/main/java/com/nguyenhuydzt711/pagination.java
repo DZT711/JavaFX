@@ -13,8 +13,7 @@ public class pagination extends Application {
             new Image("file:src/main/java/com/nguyenhuydzt711/pagination_img/download.jfif"),
             new Image("file:src/main/java/com/nguyenhuydzt711/pagination_img/download (1).jfif"),
             new Image("file:src/main/java/com/nguyenhuydzt711/pagination_img/download (2).jfif"),
-            new Image(
-                    "file:src/main/java/com/nguyenhuydzt711/pagination_img/geforce-rtx-5090-learn-more-og-1200x630.jpg"),
+            new Image("file:src/main/java/com/nguyenhuydzt711/pagination_img/geforce-rtx-5090-learn-more-og-1200x630.jpg"),
             new Image("file:src/main/java/com/nguyenhuydzt711/pagination_img/lightning-20260101-1.jpg")
     };
 
